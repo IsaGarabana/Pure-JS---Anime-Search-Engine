@@ -15,10 +15,11 @@ let dataFavorites = [];
 ////Función que pinta UN elemento del Array////
 function renderAnime(dataAnime) {
 	console.log(dataAnime);
-	searchResult.innerHTML += `<li class="js_addToFav">
+	console.log(dataAnime.title);
+	searchResult.innerHTML += `<li  class="js_addToFav" data-title="${dataAnime.title}" >
 			<img
 				src="${dataAnime.image_url}"
-				class=""
+				data-title="${dataAnime.title}
 			></img>
 			<p class="">${dataAnime.title}</p>
 		</li>`;
@@ -57,7 +58,8 @@ function handleSearchButton(ev) {
 
 ////Función que añade elementos a la lista de favoritos///
 function handleAddtoFavs(event) {
-	console.log(event.currentTarget);
+	const selectedAnimeName = event.currentTarget.dataset.title;
+	console.log(`adding to favorites ${selectedAnimeName}`);
 }
 
 ////Función que pinta los favoritos////
