@@ -16,42 +16,55 @@
 
 	<body>
 		<header class="header">
-			<h1 class="header__title">Anime Series Search Engine</h1>
+			<h1 class="header__title">Anime Search Engine</h1>
 
 			<div class="">
 				<h2 class="">Find your Anime</h2>
-				<form class="" method="" action="">
+				<form class="">
 					<label class="" for="search"></label>
 					<input
-						class=""
+						class="js-input"
 						id="search"
 						type="text"
 						name="search"
 						value=""
-						placeholder="E.g.: Totoro"
+						placeholder="E.g.:Totoro"
 					/>
-					<input class="" type="button" name="button" value="Go!" />
+					<input class="js-searchBtn" type="submit" name="button" value="Go!" />
 					<input class="" type="button" name="button" value="Reset" />
 				</form>
 			</div>
 		</header>
 
 		<main class="main">
-			<section class="">
+			<!-- <section class="">
 				<div class="">
 					<h3 class="">My Top Animes</h3>
-					<button class="main-part__section2--button js-favorites-reset">
-						Clear List
-					</button>
+					<button class="">Clear List</button>
 				</div>
-				<ul class="">
-					Aquí el listado de Favoritos
+
+				<ul class="topAnimeList js-topAnimeList">
+					<li class= "topAnimeList__item js-topAnime" >
+						<img src="https://via.placeholder.com/150x150/ffffff/666666/?text=Favorito1" class= "topAnimeList__item--image" alt="titulo de favorito1" title="Titulo de Favorito2"></img>
+						<p class= "topAnimeList__item--text"> Favorito</p>
+					</li>
+					<li class= "topAnimeList__item js-topAnime" > 
+						<img src="https://via.placeholder.com/150x150/ffffff/666666/?text=Favorito2" class= "topAnimeList__item--image">
+					</img>
+						<p class= "topAnimeList__item--text"> Favorito 2</p>
+					</li>
+					<li class= "topAnimeList__item js-topAnime" >
+						<img src="https://via.placeholder.com/150x150/ffffff/666666/?text=Favorito3" class= "topAnimeList__item--image">
+					</img>
+						<p class= "topAnimeList__item--text"> Favorito 3</p>
+					</li>
 				</ul>
+			</section> -->
+
+			<section class="">
+				<h3 class="">Animes Search Result</h3>
+				<ul class="searchResult js-searchResult"></ul>
 			</section>
-
-			<span class="span2">Click & add to favorites </span>
-
-			<section class="container"></section>
 		</main>
 		<script src="./assets/js/main.js"></script>
 	</body>

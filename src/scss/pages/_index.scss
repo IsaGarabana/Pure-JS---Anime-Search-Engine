@@ -1,0 +1,15 @@
+.topAnimeList {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+
+	&__item {
+		&--image {
+			border: 1px solid rebeccapurple;
+		}
+
+		&--text {
+			text-align: center;
+		}
+	}
+}
