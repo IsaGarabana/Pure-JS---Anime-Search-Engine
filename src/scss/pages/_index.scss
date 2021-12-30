@@ -1,3 +1,29 @@
+///Clases para JavaScript///@at-root
+
+.highlight {
+	border: 5px solid orange;
+	background-color: papayawhip;
+	border-radius: 5px;
+	color: orange;
+}
+
+.main {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-around;
+
+	&__favTitle {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		&--btn {
+			margin-left: 20px;
+			height: 20px;
+		}
+	}
+}
+
 .topAnimeList {
 	display: flex;
 	align-items: center;
@@ -11,5 +37,15 @@
 		&--text {
 			text-align: center;
 		}
+	}
+}
+
+.FavList {
+	visibility: hidden;
+}
+
+.header {
+	&__title {
+		text-align: center;
 	}
 }
