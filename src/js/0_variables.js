@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 "use strict";
 /////////////////////////  VARIABLES GLOBALES /////////////////////////
 const searchResult = document.querySelector(".js-searchResult");
