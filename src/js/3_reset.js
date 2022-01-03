@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 "use strict";
 
 ///Función que resetea los resultados de búsqueda y el input///

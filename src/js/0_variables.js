@@ -1,3 +1,4 @@
+/* eslint-disable quotes */
 /* eslint-disable no-unused-vars */
 "use strict";
 /////////////////////////  VARIABLES GLOBALES /////////////////////////
@@ -7,6 +8,7 @@ const searchInput = document.querySelector(".js-input");
 const searchBtn = document.querySelector(".js-searchBtn");
 const resetInputBtn = document.querySelector(".js-resetInput");
 const favList = document.querySelector(".js-favList");
+
 ///Array de datos del fetch///
 let data = [];
 

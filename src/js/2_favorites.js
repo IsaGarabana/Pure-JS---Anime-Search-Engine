@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
 "use strict";
 
 ////Función que añade elementos a la lista de favoritos////
@@ -21,7 +23,7 @@ function handleAddToFavs(event) {
 	}
 
 	//aprovechamos el evento para destacar con colores el anime seleccionado
-	event.currentTarget.classList.toggle("highlight");
+	event.currentTarget.classList.add("highlight");
 
 	saveFavsInLS();
 	renderAllFavs();
@@ -29,7 +31,7 @@ function handleAddToFavs(event) {
 
 ////Función que pinta todos los favoritos recorriendo el array de favoritos////
 function renderAllFavs() {
-	favList.innerHTML = ""; //'primero vaciamos, para que no nos pinte de nuevo los que ya tenemos en el array'
+	favList.innerHTML = ""; //'primero vaciamos el HTML, para que no nos pinte de nuevo los que ya tenemos en el array'
 	for (const eachFav of dataFavorites) {
 		renderFavsItem(eachFav);
 	}
@@ -37,7 +39,7 @@ function renderAllFavs() {
 
 ////Función que pinta UN favorito////
 function renderFavsItem(eachFav) {
-	favList.innerHTML += `<li  class="js_addToFav" data-title="${eachFav.title}" >
+	favList.innerHTML += `<li  class="js_addToFav " data-title="${eachFav.title}" >
 			<img src="${eachFav.image_url}"></img>
 			<p class="">${eachFav.title}</p>
 			</li>
