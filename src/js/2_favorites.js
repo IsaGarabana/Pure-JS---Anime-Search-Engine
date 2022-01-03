@@ -23,7 +23,7 @@ function handleAddToFavs(ev) {
 	}
 
 	//aprovechamos el evento para destacar con colores el anime seleccionado
-	ev.currentTarget.classList.add("highlight");
+	ev.currentTarget.classList.toggle("highlight");
 
 	saveFavsInLS();
 	renderAllFavs();

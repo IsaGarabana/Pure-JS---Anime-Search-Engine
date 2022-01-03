@@ -25,11 +25,10 @@ function getResultsFromAPI() {
 				if (data.length === 0) {
 					searchResult.innerHTML = "sorry your search did not match any results";
 				} else {
-					// Y llamamos a la función que pinta resultados
+					//Llamamos a la función que pinta resultados
 					renderAnimeList();
 				}
 			});
-		console.log(data);
 	} else {
 		// eslint-disable-next-line quotes
 		searchResult.innerHTML = "Please type at least 3 characters to start searching";
@@ -37,10 +36,21 @@ function getResultsFromAPI() {
 }
 
 ////Función que pinta UN elemento del Array////
-function renderAnime(dataAnime) {
-	searchResult.innerHTML += `<li  class="js_addToFav" data-title="${dataAnime.title}" >
-	<img src="${dataAnime.image_url}" data-title="${dataAnime.title}></img>
-	<p class="">${dataAnime.title}</p>
+function renderAnime(eachAnime) {
+	let favClass = "";
+	const alreadyInFavs = dataFavorites.find(
+		(favAnime) => favAnime.title === eachAnime.title
+	);
+
+	if (alreadyInFavs !== undefined) {
+		favClass = "highlight";
+	} else {
+		favClass = "";
+	}
+
+	searchResult.innerHTML += `<li  class="js_addToFav ${favClass}" data-title="${eachAnime.title}" >
+	<img src="${eachAnime.image_url}" data-title="${eachAnime.title}></img>
+	<p class="">${eachAnime.title}</p>
 		</li>`;
 }
 
