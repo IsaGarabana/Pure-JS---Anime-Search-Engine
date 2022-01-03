@@ -10,8 +10,14 @@ function handleResetInput(ev) {
 
 ////Función que resetea todos los favoritos////
 
-///FALTA
+function handleResetFavs(ev) {
+	dataFavorites = [];
+	renderAllFavs();
+	saveFavsInLS();
+}
+//FALTA
 
 //// Listener ////
 
 resetInputBtn.addEventListener("click", handleResetInput);
+resetFavsBtn.addEventListener("click", handleResetFavs);
