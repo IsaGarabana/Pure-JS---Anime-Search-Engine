@@ -1,6 +1,7 @@
 # Anime Search Engine
 
-######By [IsaGarabana](https://github.com/IsaGarabana)
+Made by:
+[![Autor](https://img.shields.io/badge/Github-IsaGarabana-green?style=plastic&logo=Github)](https://github.com/IsaGarabana)
 
 ---
 
