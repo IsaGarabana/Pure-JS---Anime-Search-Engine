@@ -7,47 +7,37 @@
 	color: orange;
 }
 
+.header {
+	background: url(../../assets/images/flying_totoro.png) right top no-repeat;
+	background-size: contain;
+	&__title {
+		text-align: center;
+	}
+}
+
 .main {
 	display: flex;
-	align-items: flex-start;
 	justify-content: space-around;
-
-	&__favTitle {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-
+	border: 3px solid orange;
+	margin-top: 15px;
+	&__favs {
+		&--title {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
 		&--btn {
 			margin-left: 20px;
 			height: 20px;
 		}
 	}
-}
 
-.topAnimeList {
-	display: flex;
-	align-items: center;
-	justify-content: space-around;
+	&__results {
+		display: flex;
 
-	&__item {
-		&--image {
-			border: 1px solid rebeccapurple;
+		&--listItem {
+			width: 240px;
+			height: 350px;
 		}
-
-		&--text {
-			text-align: center;
-		}
-	}
-}
-
-.FavList {
-	visibility: hidden;
-}
-
-.header {
-	height: 100px;
-
-	&__title {
-		text-align: center;
 	}
 }

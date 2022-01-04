@@ -9,9 +9,13 @@ const searchBtn = document.querySelector(".js-searchBtn");
 const resetInputBtn = document.querySelector(".js-resetInput");
 const favList = document.querySelector(".js-favList");
 const resetFavsBtn = document.querySelector(".js-resetFavsBtn");
+const animesListForFavs = document.querySelectorAll(".js_addToFav");
 
 ///Array de datos del fetch///
 let data = [];
 
 ///Array de Favoritos///
 let dataFavorites = [];
+
+///Variable que cambia la clase a los favoritos///
+let favClass = "";

@@ -13,7 +13,6 @@ function handleSearchButton(ev) {
 }
 function getResultsFromAPI() {
 	let inputValue = getInputValue();
-	console.log(inputValue);
 	//la api sólo acepta búsquedas de 3 caracteres o más
 	if (inputValue.length > 2) {
 		fetch(`${apiUrl}${inputValue}`)
@@ -37,10 +36,9 @@ function getResultsFromAPI() {
 
 ////Función que pinta UN elemento del Array////
 function renderAnime(eachAnime) {
-	//buscamos a ver si ya hay algún elemento en favoritos para darle la clase resaltada
 	//creamos una variable que luego interpolaremos en el <li> que pintemos
-	let favClass = "";
-	//buscamos en el array de favoritos si hay algún objeto cuyo título coincida con alguno de nuestro array (eachAnime.title)
+
+	//buscamos en el array de favoritos si hay algún objeto cuyo título coincida con alguno de nuestro array d e resultados (eachAnime.title)
 	const alreadyInFavs = dataFavorites.find(
 		(favAnime) => favAnime.title === eachAnime.title
 	);
@@ -52,7 +50,7 @@ function renderAnime(eachAnime) {
 		favClass = "";
 	}
 
-	searchResult.innerHTML += `<li  class="js_addToFav ${favClass}" data-title="${eachAnime.title}" >
+	searchResult.innerHTML += `<li  class=" js_addToFav ${favClass}" data-title="${eachAnime.title}" >
 	<img src="${eachAnime.image_url}" data-title="${eachAnime.title}></img>
 	<p class="">${eachAnime.title}</p>
 		</li>`;
@@ -67,7 +65,7 @@ function renderAnimeList() {
 		renderAnime(eachAnime);
 	}
 
-	//Después del bucle que recorre y pinta los elementos del array, una vez pintados, los seleccionamos todos y ponemos el listener (abajo) para añadir después con currentarget el seleccionado a la lista de favoritos.
+	//Después del bucle que recorre y pinta los elementos del arraylos seleccionamos todos y ponemos el listener para añadir con currentarget el seleccionado a la lista de favoritos.
 	const animesListForFavs = document.querySelectorAll(".js_addToFav");
 	for (const eachAnimeForFavs of animesListForFavs) {
 		eachAnimeForFavs.addEventListener("click", handleAddToFavs);
