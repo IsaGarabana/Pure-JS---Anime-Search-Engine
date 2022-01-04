@@ -18,9 +18,10 @@ function getFavsFromLS() {
 	} else {
 		//hay que parsear el archivo de LS, para que tome formato y se pueda pintar
 		dataFavorites = JSON.parse(storedFavs);
-		//llamamos a la función que pinta
+		//llamamos a la función que pinta los favoritos
 		renderAllFavs();
 	}
 }
 
+//cogemos los favoritos al arrancar la página, llamamos a la función directamente
 getFavsFromLS();

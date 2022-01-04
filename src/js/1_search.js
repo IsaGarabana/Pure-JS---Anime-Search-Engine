@@ -23,7 +23,7 @@ function getResultsFromAPI() {
 				data = dataApi.results;
 
 				if (data.length === 0) {
-					searchResult.innerHTML = "sorry your search did not match any results";
+					searchResult.innerHTML = "Ups!! No animes with that name. Try a different one!";
 				} else {
 					//Llamamos a la función que pinta resultados
 					renderAnimeList();
@@ -37,11 +37,15 @@ function getResultsFromAPI() {
 
 ////Función que pinta UN elemento del Array////
 function renderAnime(eachAnime) {
+	//buscamos a ver si ya hay algún elemento en favoritos para darle la clase resaltada
+	//creamos una variable que luego interpolaremos en el <li> que pintemos
 	let favClass = "";
+	//buscamos en el array de favoritos si hay algún objeto cuyo título coincida con alguno de nuestro array (eachAnime.title)
 	const alreadyInFavs = dataFavorites.find(
 		(favAnime) => favAnime.title === eachAnime.title
 	);
 
+	//si encuentra coincidencias, la clase será highlight. Si no, estará vacía y no se aplicará clase
 	if (alreadyInFavs !== undefined) {
 		favClass = "highlight";
 	} else {
