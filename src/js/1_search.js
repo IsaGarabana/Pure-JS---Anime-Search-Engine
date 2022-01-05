@@ -13,7 +13,7 @@ function handleSearchButton(ev) {
 }
 function getResultsFromAPI() {
 	let inputValue = getInputValue();
-	console.log(inputValue);
+
 	//la api sólo acepta búsquedas de 3 caracteres o más
 	if (inputValue.length > 2) {
 		fetch(`${apiUrl}${inputValue}`)

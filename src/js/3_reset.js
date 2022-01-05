@@ -13,9 +13,9 @@ function handleResetInput(ev) {
 function handleResetFavs(ev) {
 	dataFavorites = [];
 	renderAllFavs();
+	renderAnimeList();
 	saveFavsInLS();
 }
-//FALTA
 
 //// Listener ////
 

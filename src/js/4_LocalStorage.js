@@ -23,5 +23,20 @@ function getFavsFromLS() {
 	}
 }
 
+// function getFavsFromLS() {
+// 	//metemos en una constante el contenido de LS
+// 	const storedFavs = localStorage.getItem("favAnimes");
+
+// 	switch (storedFavs) {
+// 		case null:
+// 			dataFavorites = [];
+// 			break;
+// 		default:
+// 			dataFavorites = JSON.parse(storedFavs);
+// 			renderAllFavs();
+// 			renderAnimeList();
+// 	}
+// }
+
 //cogemos los favoritos al arrancar la página, llamamos a la función directamente
 getFavsFromLS();

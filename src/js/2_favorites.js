@@ -45,7 +45,7 @@ function renderAllFavs() {
 
 ////Función que pinta UN favorito////
 function renderFavsItem(eachFav) {
-	favList.innerHTML += `<li  class="js_addToFav " data-title="${eachFav.title}" >
+	favList.innerHTML += `<li class="js_addToFav " data-title="${eachFav.title}" >
 			<img src="${eachFav.image_url}"></img>
 			<p class="">${eachFav.title}</p>
 			</li>
@@ -68,5 +68,6 @@ function handleDeleteFromFavs(ev) {
 	);
 
 	renderAllFavs();
+	renderAnimeList();
 	saveFavsInLS();
 }
