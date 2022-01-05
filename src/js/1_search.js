@@ -1,16 +1,17 @@
 /* eslint-disable indent */
 "use strict";
 
-////Función que coge el valor del input////
+///////////////////////Función que coge el valor del input///////////////////////
 function getInputValue() {
 	return searchInput.value.toLowerCase();
 }
 
-//// Función que busca en el API al pulsar el botón Search////
+/////////////////////// Función que busca en el API al pulsar el botón Search///////////////////////
 function handleSearchButton(ev) {
 	ev.preventDefault();
 	getResultsFromAPI();
 }
+
 function getResultsFromAPI() {
 	let inputValue = getInputValue();
 	//la api sólo acepta búsquedas de 3 caracteres o más
@@ -34,10 +35,10 @@ function getResultsFromAPI() {
 	}
 }
 
-////Función que pinta UN elemento del Array////
+///////////////////////Función que pinta UN elemento del Array///////////////////////
 function renderAnime(eachAnime) {
 	//creamos una variable que luego interpolaremos en el <li> que pintemos
-
+	let favClass = "";
 	//buscamos en el array de favoritos si hay algún objeto cuyo título coincida con alguno de nuestro array d e resultados (eachAnime.title)
 	const alreadyInFavs = dataFavorites.find(
 		(favAnime) => favAnime.title === eachAnime.title
@@ -56,7 +57,7 @@ function renderAnime(eachAnime) {
 		</li>`;
 }
 
-////Función que recorre el array pintando TODOS sus elementos////
+////////////////////Función que recorre el array pintando TODOS sus elementos////////////////////
 function renderAnimeList() {
 	//hacemos un bucle para recorrer todo el array data, y pedimos que en cada vuelta haga un render de cada elemento con la función qur tenemos definida: renderAnime(eachAnime)
 	searchResult.innerHTML = "";
@@ -72,6 +73,6 @@ function renderAnimeList() {
 	}
 }
 
-//// Listener////
+/////////////////////// Listener///////////////////////
 
 searchBtn.addEventListener("click", handleSearchButton);

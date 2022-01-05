@@ -16,6 +16,3 @@ let data = [];
 
 ///Array de Favoritos///
 let dataFavorites = [];
-
-///Variable que cambia la clase a los favoritos///
-let favClass = "";

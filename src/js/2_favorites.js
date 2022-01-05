@@ -72,9 +72,8 @@ function handleDeleteFromFavs(ev) {
 		(row) => row.title !== selectedFavData.title
 	);
 
-	return selectedFavButton;
-	removeHighlightClassInResults();
 	renderAllFavs();
+	renderAnimeList();
 	saveFavsInLS();
 }
 
@@ -88,24 +87,3 @@ function removeHighlightClassInResults(selectedFavButton) {
 		searchResult.innerHTML.classlist.add("highlight");
 	}
 }
-
-//// Función que elimina la clase al li en el array de resultados al eliminar el favorito con la x
-//creamos una variable que luego interpolaremos en el <li> que pintemos
-// let favClass = "";
-// //buscamos en el array de favoritos si hay algún objeto cuyo título coincida con alguno de nuestro array d e resultados (eachAnime.title)
-// const alreadyInFavs = dataFavorites.find(
-// 	(favAnime) => favAnime.title === eachAnime.title
-// );
-
-// //si encuentra coincidencias, la clase será highlight. Si no, estará vacía y no se aplicará clase
-// if (alreadyInFavs !== undefined) {
-// 	favClass = "highlight";
-// } else {
-// 	favClass = "";
-// }
-
-// searchResult.innerHTML += `<li  class=" js_addToFav ${favClass}" data-title="${eachAnime.title}" >
-// <img src="${eachAnime.image_url}" data-title="${eachAnime.title}></img>
-// <p class="">${eachAnime.title}</p>
-// 	</li>`;
-// }

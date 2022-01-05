@@ -1,18 +1,25 @@
-///Clases para JavaScript///@at-root
+///Clases para JavaScript///
 
 .highlight {
-	border: 5px solid orange;
-	background-color: papayawhip;
+	border: 5px solid purple;
+	background-color: rgba(255, 158, 1, 0.296);
 	border-radius: 5px;
 	color: orange;
 }
 
+body {
+	background-color: papayawhip;
+}
+
 .header {
-	background: url(../../assets/images/flying_totoro.png) right top no-repeat;
+	background: url(../../assets/images/smile.png) top right no-repeat;
 	background-size: contain;
 	&__title {
 		text-align: center;
 	}
+	// &__form {
+	// 	margin-bottom: 10px;
+	// }
 }
 
 .main {
@@ -34,6 +41,11 @@
 
 	&__results {
 		display: flex;
+		justify-content: space-around;
+
+		&--list {
+			display: flex;
+		}
 
 		&--listItem {
 			width: 240px;
