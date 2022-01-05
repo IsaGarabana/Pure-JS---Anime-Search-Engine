@@ -45,7 +45,7 @@ function renderAnime(eachAnime) {
 		(favAnime) => favAnime.title === eachAnime.title
 	);
 
-	//si encuentra coincidencias, la clase será highlight. Si no, estará vacía y no se aplicará clase
+	//si encuentra coincidencias=clase highlight. Si no, vacía y sin clase
 	if (alreadyInFavs !== undefined) {
 		favClass = "highlight";
 	} else {
