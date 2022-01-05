@@ -55,6 +55,7 @@ function renderAnime(eachAnime) {
 	searchResult.innerHTML += `<li  class="js_addToFav ${favClass}" data-title="${eachAnime.title}" >
 	<img src="${eachAnime.image_url}" data-title="${eachAnime.title}></img>
 	<p class="">${eachAnime.title}</p>
+	<p>${eachAnime.episodes}</p>
 		</li>`;
 }
 

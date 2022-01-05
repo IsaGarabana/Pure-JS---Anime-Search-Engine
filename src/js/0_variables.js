@@ -9,6 +9,7 @@ const searchBtn = document.querySelector(".js-searchBtn");
 const resetInputBtn = document.querySelector(".js-resetInput");
 const favList = document.querySelector(".js-favList");
 const resetFavsBtn = document.querySelector(".js-resetFavsBtn");
+const buttonLog = document.querySelector(".js-logTitle");
 
 ///Array de datos del fetch///
 let data = [];
